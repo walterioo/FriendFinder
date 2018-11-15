@@ -15,9 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // ROUTING
-    
+
+    app.use("/api",apiRoute);
     app.use("/", htmlRoute);
-    app.use("/api",apiRoute)
+    
+    
     
 // Server Listener
 app.listen(PORT, () => {

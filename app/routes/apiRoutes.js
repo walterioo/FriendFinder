@@ -5,9 +5,7 @@ const path = require("path"),
 
 router
     .get("/friends", (req, res) => {
-        console.log("api friends");
-        
-        res.sendFile(path.join(__dirname, "../public/survey.html"));
+        res.send("Api Friends")    
     })
     .post("/friends", (req,res) => {
         res.sendFile(path.join(__dirname,"../public/survey.html"))
