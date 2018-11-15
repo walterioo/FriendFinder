@@ -1,5 +1,4 @@
-const path = require("path"),
-    express = require("express"),
+const express = require("express"),
     router = express.Router();
 
 var friends = require("../data/friends");
@@ -8,14 +7,14 @@ var defaultArray = friends.friendsArray;
 
 router
     .get("/friends", (req, res) => {
-        //res.send("Api Friends");
         res.json(friends.friendsArray);
     })
     .post("/friends", (req, res) => {
         console.log("Post succesful");
         let newFriend = req.body;
+        // Calls the bestMatch function to calculate best match
         let match = bestMatch(newFriend);
-        
+
         friends.friendsArray.push(newFriend);
         res.json(match);
     })
@@ -24,7 +23,7 @@ router
         res.json(true);
     })
 
-function bestMatch (newFriend)  {
+function bestMatch(newFriend) {
     // Uses map method to make a new array of the total difference
     // of each friend in the list
     let differences = friends.friendsArray.map((friends) => {

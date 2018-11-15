@@ -19,7 +19,7 @@ var defaultArray = [
       },
       {
         "name":"Lisa",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://piximus.net/media2/45329/pretty-girls-that-are-extremely-easy-on-the-eyes-2.jpg",
         "scores":[
             1,
             5,
@@ -32,7 +32,8 @@ var defaultArray = [
             5,
             2
           ]
-      }
+      },
+      
 ];
 let temp = defaultArray;
 friendsArray = temp;

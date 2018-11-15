@@ -10,9 +10,9 @@ router
     .get("/survey", (req,res) => {
         res.sendFile(path.join(__dirname,"../public/survey.html"))
     })
-    .get("*", (req,res) => {
-        res.redirect("/");
-    })
+    // .get("*", (req,res) => {
+        // res.redirect("/");
+    // })
 
 
 module.exports = router;
