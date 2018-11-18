@@ -43,3 +43,8 @@ a:hover {
      overflow-y: scroll;
      max-height: 28vh;
  }
+
+ img {
+     max-width: 200px;
+     max-height: 200px;
+ }
