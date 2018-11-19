@@ -26,18 +26,7 @@ router
 function bestMatch(newFriend) {
     // Uses map method to make a new array of the total difference
     // of each friend in the list
-    let differences = friends.friendsArray.map((friends) => {
-        let total = 0;
-        // For Each Loop used to calculeta the diffenrece in value of
-        // the two scores in the same array position 
-        newFriend.scores.forEach((score, i) => {
-            let x = Math.abs(parseInt(score) - parseInt(friends.scores[i]));
-            total += x;
-        });
-        // Total is the sum of the differences in each question
-        // It is returned and pushed into the differences array
-        return total;
-    });
+    let differences = friends.friendsArray.map((friends) => calculateDiff(friends, newFriend));
     // Calculates the smallest number in the array
     let minDif = Math.min(...differences);
     // Index of the position of the smallest number in the differences array
@@ -46,4 +35,18 @@ function bestMatch(newFriend) {
     let match = friends.friendsArray[index];
     return match;
 }
+
+function calculateDiff (friends, newFriend) {
+    let total = 0;
+    // For Each Loop used to calculeta the diffenrece in value of
+    // the two scores in the same array position 
+    newFriend.scores.forEach((score, i) => {
+        let x = Math.abs(parseInt(score) - parseInt(friends.scores[i]));
+        total += x;
+        });
+    // Total is the sum of the differences in each question
+    // It is returned and pushed into the differences array
+    return total;
+};
+
 module.exports = router;
