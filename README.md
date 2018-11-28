@@ -1,5 +1,5 @@
 # Friend Finder Web App
-Web App made with NodeJS, ExpressJs and deployend on Heroku
+Web App made with NodeJS, ExpressJs and deployed on Heroku
 
 ## Description
 
