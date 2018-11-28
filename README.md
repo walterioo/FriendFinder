@@ -6,9 +6,10 @@ Web App made with:
 
 ## Description
 
- Find your next friend with this awesome app.
+ Find your next friend with Friend Finder.
  
- Answer the survey and it will match you to the person who's like you!
+ 
+ Answer the 10 question survey, they will be compared with the answers of other users in the database and it will match you to the person who's similar to you
  
  ## Screenshot
  
